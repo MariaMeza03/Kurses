@@ -12,6 +12,12 @@
   top: 0;
   left: 0;
   z-index: 100; }
+  .header--show {
+    padding: 15px;
+    top: 0;
+    background: linear-gradient(90deg, white); }
+  .header--hide {
+    top: -100%; }
   @media (min-width: 1199px) {
     .header {
       height: auto; } }

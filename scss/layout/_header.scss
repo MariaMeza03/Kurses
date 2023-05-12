@@ -7,6 +7,17 @@
 	left: 0;
 	z-index: 100;
 
+
+	&--show{
+		padding: 15px;
+		top: 0;
+		background: linear-gradient(90deg, white); //#92d2
+	}
+
+	&--hide{
+		top: -100%;
+	}
+
 	@media(min-width:1199px){
 		height: auto;
 	}
