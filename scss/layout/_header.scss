@@ -1,11 +1,15 @@
 .header {
 	width: 100%;
 	height: 80px;
-	background-color: $onyx;
+	background-color: white;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
+
+	@media(min-width:1199px){
+		height: auto;
+	}
 
 	&__mobile {
 		width: 100%;
@@ -16,7 +20,7 @@
 			display: none;
 		}
 
-		.container {
+		.container-person {
 			@include flex-center-between;
 			height: 100%;
 		}
@@ -24,361 +28,133 @@
 		&__logo {
 			height: 43px;
 			max-width: 43px;
-
-			svg{
-				fill: $dark_slate_blue;
-
-				path{
-					fill: $dark_slate_blue;
-				}
-
-			}
-
 		}
 
-		&__buttons{
-			display: flex;
-			gap: 10px;
+		&__toggle {
+			width: 43px;
+			height: 43px;
+			@include flex-center-center;
+			cursor: pointer;
+			background-color:#199cd8;
+			border: 1px solid transparent;
+    		border-radius: 4px;
+			padding: 13px 10px;
 
-			&__idiom{
-				width: 43px;
-				height: 43px;
-				cursor: pointer;
-				@include flex-center-center;
-	
-				svg{
-					width: 100%;
-				}
-			}
+			&__bar {
+				width: 100%;
+				height: 2px;
+				background-color: white;
+				position: relative;
+				transition: 0.3s;
 
-			&__toggle {
-				width: 43px;
-				height: 43px;
-				@include flex-center-center;
-				cursor: pointer;
-	
-				&--active {
-	
-					.header__mobile___buttons__toggle__bar {
-						background-color: transparent;
-	
-						&::before {
-							top: 0;
-							left: 0;
-							transform: rotate(315deg);
-						}
-	
-						&::after {
-							top: 0;
-							left: 0;
-							transform: rotate(-315deg);
-						}
-					}
-	
-				}
-	
-				&__bar {
+				&::before {
+					content: "";
+					position: absolute;
 					width: 100%;
-					height: 2px;
-					background-color: $dark_slate_blue;
-					position: relative;
+					height: 100%;
+					top: -8px;
+					left: 0;
+					background-color: white;
 					transition: 0.3s;
-	
-					&::before {
-						content: "";
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						top: -8px;
-						left: 0;
-						background-color: $dark_slate_blue;
-						transition: 0.3s;
-					}
-	
-					&::after {
-						content: "";
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						bottom: -8px;
-						left: 0;
-						background-color: $dark_slate_blue;
-						transition: 0.3s;
-					}
-	
 				}
-	
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					bottom: -8px;
+					left: 0;
+					background-color: white;
+					transition: 0.3s;
+				}
+
 			}
-			
+
 		}
+		
+
 
 	}
 
 	&__desktop {
 		width: 100%;
-		height: 100%;
+		height: auto;
 		display: none;
+
 
 		@media(min-width: 1200px) {
 			display: block;
 		}
 
-		.container {
+		.container-person {
 			@include flex-center-between;
 			height: 100%;
+			padding-top: 9px;
+			padding-bottom: 14px;
+			
 		}
 
-		svg {
-			height: 43px;
-			transition: 0.1s;
-
-			path,
-			rect{
-				transition: 0.1s;
-			}
-
+		&__logo {
+			width: auto;
+			height: 74px;
 		}
 
-		&__left {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 30px;
 
-			&__item {
-				@include flex-center-center;
-				width: 100%;
-				height: 45px;
+		&__pages{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			font-size: 14px;
+			font-weight: 700;
+			gap: 15px;
 
-				&--active{
-
-					svg{
-						fill: $dark_slate_blue!important;
-						height: 30px;
-
-						path{
-							fill: $dark_slate_blue!important;
-						}
-
-					}
-
-				}
-
-				&:nth-child(1){
-				
-					&:hover{
-						
-						svg {
-							fill: #403D8B;
-
-							path{
-								fill: #403D8B;
-							}
-
-						}
-
-					}
-	
-				}
-
-				&:nth-child(2){
-				
-					&:hover{
-						
-						svg {
-							fill: #A6FDBA;
-
-							path{
-								fill: #A6FDBA;
-							}
-
-						}
-
-					}
-	
-				}
-
-				&:nth-child(3){
-				
-					&:hover{
-						
-						svg {
-							fill: #CB9A1F;
-
-							path{
-								fill: #CB9A1F;
-							}
-
-						}
-
-					}
-	
-				}
-
-				svg {
-					height: 30px;
-					fill: $white;
-
-					path {
-						fill: $white;
-					}
-
-				}
-
+			@media(min-width:1440px){
+				gap: 40px;
 			}
+			
 
-		}
-
-		&__right {
-			display: grid;
-			grid-template-columns: repeat(8, 1fr);
-			gap: 30px;
-
-			&__item {
-				@include flex-center-center;
-				width: 100%;
-				height: 45px;
-
-				&--active{
-
-					svg{
-						height: 30px;
-						fill: $dark_slate_blue!important;
-
-						path{
-							fill: $dark_slate_blue!important;
-						}
-
-					}
-
-				}
-
-				&:nth-child(4){
+			a.links{
+				font-size: 16px;
+				color: black;
+				text-transform: uppercase;
+				font-weight: 800;
+				padding: 10px 0;
+				transition: 0.3s;
 				
-					&:hover{
-						
-						svg {
-							fill: #6000D2;
-
-							path{
-								fill: #6000D2;
-							}
-
-						}
-
-					}
 	
+				&:hover{
+					color: #213C77;
 				}
-
-				&:nth-child(5){
-				
-					&:hover{
-						
-						svg {
-							fill: #C50433;
-
-							rect{
-								fill: #C50433;
-							}
-
-						}
-
-					}
 	
-				}
-
-				&:nth-child(6){
-				
-					&:hover{
-						
-						svg {
-							fill: #C58800;
-
-							path{
-								fill: #C58800;
-							}
-
-						}
-
-					}
-	
-				}
-
-				&:nth-child(7){
-				
-					&:hover{
-						
-						svg {
-							fill: #12a39d;
-
-							path{
-								fill: #12a39d;
-							}
-
-						}
-
-					}
-	
-				}
-
-				&:nth-child(8){
-				
-					&:hover{
-						
-						svg {
-							fill: #403D8B;
-
-							path{
-								fill: #403D8B;
-							}
-
-						}
-
-					}
-	
-				}
-
-				&:nth-child(9){
-				
-					&:hover{
-						
-						svg {
-							fill: #403D8B;
-
-							path{
-								fill: #403D8B;
-							}
-
-						}
-
-					}
-	
-				}
-
-				svg {
-					max-width: 100%;
-					width: 100%;
-					max-height: 30px;
-					height: 100%;
-					fill: $white;
-
-					path, rect {
-						fill: $white;
-					}
-
-				}
-
 			}
-
-			&__idiom{
-				width: 43px;
-				height: 43px;
-				cursor: pointer;
-				@include flex-center-center;
 	
-				svg{
-					width: 100%;
+			a.phone{
+				font-size: 16px;
+				color: black;
+				text-transform: uppercase;
+				font-weight: 800;
+				padding: 10px 0;
+				transition: 0.3s;
+	
+				&::hover{
+					color: #213C77;
 				}
+	
 			}
+	
+			a.whatsApp{
+				background: #81BB27;
+				border-radius: 30px;
+				font-size: 16px;
+				padding: 16px 36px !important;
+				margin-top: 15px;
+				color: white;
+				font-weight: bold;
+	
+				
+			}	
 
 		}
 
