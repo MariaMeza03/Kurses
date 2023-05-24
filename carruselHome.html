@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="catalog">
+
+                <div class="catalog__title">
+                    <div class="catalog__title__icon">
+                        <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-22_11-53-42.jpg" alt="whatsApp" width="100%" height="100%" />
+                    </div>
+                    <h1 class="title">VENTA EN LÍNEA</h1>
+                    
+                </div>
+
+                <div class="carousel catalog__carousel_fotovoltaico">
+                    <div class="carousel-item " ><img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/IPHONE-MOCKUP-TMGRAPHICS.png" alt="galeria_image_one" width="100%" height="100%"></div>
+                    <div class="carousel-item"><img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/Square_Book_Mockup_3.png" alt="galeria_image_two" width="100%" height="100%"></div>
+                    <div class="carousel-item"><img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/BANNER-MERCADO-LIBRE.png" alt="galeria_image_three" width="100%" height="100%"></div>      
+                </div>
+
+                <a class="catalog__button">
+                    Da click aquí
+                    <div class="catalog__button__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                    </div>
+                </a>
+
+         
+        </div>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+                //*carouselGeneral
+        const carousel = document.querySelectorAll('.carousel')
+        //*Fotovoltaico
+        const carouselFotovoltaico = document.querySelector('.catalog__carousel_fotovoltaico')
+
+        M.Carousel.init(carousel,{
+         duration:150
+        })
+
+        function click (){
+            carouselFotovoltaico.classList.add('carousel-active')
+            console.log("Activado")
+        }
+
+        carouselFotovoltaico.addEventListener('click' ,click)
+   
+   </script>
+
+
+</body>
+
+</html>

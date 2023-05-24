@@ -1,0 +1,132 @@
+.catalog{
+    width: 100% !important;
+
+    &__title{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+        &__icon{
+            width: 60px;
+        }
+
+      h1.title{
+        line-height: 1.18em;
+        font-size: 60px;
+        color: #292f33;
+        font-family: museo-sans, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+    }
+
+    &__carousel_fotovoltaico{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 400px;
+        -webkit-perspective: 500px;
+        perspective: 500px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+
+        &--active{
+            @include flex-center-center; 
+            flex-direction: column;
+
+            .carousel .carousel-item{
+                left: 0;
+                background-color: red;
+            }
+        }
+    }
+
+    &__button{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background: linear-gradient(170deg, rgba(2,0,36,1) 0%,#00D164 0%,#00D164 100%)!important;
+        border-radius: 15px!important;
+        font-family: 'museo-sans'!important;
+        font-weight: 700;
+        text-shadow: -1px 1px 4px #0000008a!important;
+        font-size: 26px!important;
+        color: #fff;
+        padding: 0 20px;
+        gap: 10px;
+
+        &__icon{
+            width: 20px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    
+}
+
+.carousel-active{
+    left: 0;
+    top: 0;
+    background-color: red;
+}
+.carousel{
+    height: 300px !important;
+
+    @media(min-width:520px){
+        height: 800px !important;
+    }
+
+}
+
+.carousel .carousel-item {
+    @include flex-center-center;
+    position: absolute;
+    width: 90% !important;
+    height: 200px !important;
+
+      @media(min-width:520px){
+        width: 360px !important;
+        height: 200px !important;
+    }
+
+    @media(min-width:1199px){
+        width: 800px !important;
+        height: 500px !important;
+    }
+
+    img{
+        border-radius: 17px;
+    }
+
+  
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-top: 70px;
+
+
+    input{
+        width: 100%;
+        border: 0px solid transparent;
+
+    }
+
+    &__button{
+        border-bottom: 8px solid #FFC400;
+        margin-bottom: 5px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
