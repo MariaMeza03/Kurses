@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+</head>
+<style>
+    .layout_whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  z-index: 100;
+  gap: 10px; }
+  @media (min-width: 1199px) {
+    .layout_whatsapp {
+      bottom: 40px; } }
+  .layout_whatsapp__button {
+    height: 80px;
+    width: 80px;
+    background-color: #15B633;
+    border-radius: 100%; }
+    .layout_whatsapp__button__img {
+      width: 50px;}
+      .layout_whatsapp__button__img img {
+        width: 100%; }
+    .layout_whatsapp__button__close {
+      display: none;
+      width: 50px;
+      color: #FFFFFF; }
+      .layout_whatsapp__button__close svg {
+        width: 100%; }
+    .layout_whatsapp__button--active .layout_whatsapp__button__img {
+      display: none; }
+    .layout_whatsapp__button--active .layout_whatsapp__button__close {
+      display: block; }
+  .layout_whatsapp__information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    background-color: #19E53C;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 17px;
+    color: #FFFFFF; }
+ .chat_whatsApp {
+  width: 90%;
+  margin: auto;
+  height: 230px;
+  position: fixed;
+  bottom: -200%;
+  right: 5%;
+  z-index: 100;
+  transition: 0.3s;
+  border-radius: 10px; }
+  @media (min-width: 1199px) {
+    .chat_whatsApp {
+      right: 5%;
+      width: 352px; } }
+  .chat_whatsApp--active {
+    right: 7%;
+    bottom: 300px; }
+    @media (min-width: 1199px) {
+      .chat_whatsApp--active {
+        bottom: 367px; } }
+  .chat_whatsApp__top {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #15B933;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    padding: 15px; }
+    .chat_whatsApp__top__logo {
+      width: 35px; }
+      .chat_whatsApp__top__logo img {
+        width: 100%; }
+    .chat_whatsApp__top__text h1 {
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: semibold; }
+    .chat_whatsApp__top__text p {
+      color: #FFFFFF;
+      padding-top: 10px;
+      font-size: 13px; }
+  .chat_whatsApp__agent {
+    background-color: #FFFFFF;
+    /*height: 230px;*/
+    /*overflow-y: scroll;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 15px 15px 15px; }
+    .chat_whatsApp__agent::-webkit-scrollbar-thumb {
+      background-color: #2DB742;
+      /* color of the scroll thumb */
+      border-radius: 20px;
+      /* roundness of the scroll thumb */
+      /* creates padding around scroll thumb */ }
+    .chat_whatsApp__agent__target {
+      padding: 15px;
+      width: 100%;
+      border: 1px solid #2DB742;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px; }
+      .chat_whatsApp__agent__target__information {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; }
+        .chat_whatsApp__agent__target__information__imagen {
+          width: 57px; }
+          .chat_whatsApp__agent__target__information__imagen img {
+            width: 100%; }
+        .chat_whatsApp__agent__target__information__word h1 {
+          font-size: 20px;
+          font-weight: bold;
+          color: #000000;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+        .chat_whatsApp__agent__target__information__word p {
+          font-size: 13px;
+          font-weight: normal;
+          color: #000000;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+      .chat_whatsApp__agent__target__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px;
+        background-color: #15B633;
+        border-radius: 100%; }
+        .chat_whatsApp__agent__target__icon img {
+          width: 20px; }
+      .chat_whatsApp__agent__target:hover {
+        background-color: #CFCFCF; }
+
+.chat_whatsApp__agent::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+  /* or add it to the track */ }
+    a{
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    button{
+        border: 0;
+        outline: none;
+        background-color: transparent;
+        transition: 0.3s;
+    }
+
+
+</style>
+<body>
+
+    <nav role="button" class="layout_whatsapp">
+
+		<div class="layout_whatsapp__information">¡Cotiza tus fletes en plataforma ahora!</div>
+
+		<button class="layout_whatsapp__button">
+
+			<div class="layout_whatsapp__button__img">
+				<img src='https://www.fletesurgentesmexico.com/wp-content/uploads/2023/06/whatsapp-icon-logo-6E793ACECD-seeklogo.com_.png' alt='whastapp' loading='lazy' width="100%" height="100%"/>
+			</div>
+
+			<div class="layout_whatsapp__button__close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+					<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+				  </svg>
+			</div>
+
+			<span class="layout_whatsapp__button__bar"></span>
+		</button>
+	</nav>
+
+	<nav role="button" class="chat_whatsApp">
+
+		<div class="chat_whatsApp__top">
+			<div class="chat_whatsApp__top__logo">
+				<img src='https://www.fletesurgentesmexico.com/wp-content/uploads/2023/06/whatsapp-icon-logo-6E793ACECD-seeklogo.com_.png' alt='whastapp' loading='lazy' />
+			</div>
+
+			<div class="chat_whatsApp__top__text">
+				<h1>¡Cotizamos tus fletes en plataforma en menos de 5 minutos! </h1>
+				<p>Selecciona a uno de nuestros ejecutivos para chatear con WhatsApp</p>
+			</div>
+
+			
+		</div>
+
+		<div class="chat_whatsApp__agent">
+
+			<a href='https://api.whatsapp.com/send?phone=5563534733&text=Hola%20quiero%20cotizar%20mi%20flete' target="_blank" class="chat_whatsApp__agent__target">
+
+				<div class="chat_whatsApp__agent__target__information">
+					<div class="chat_whatsApp__agent__target__information__imagen">
+						<img src="https://www.fletesurgentesmexico.com/wp-content/uploads/2023/06/person-men-two.png" alt="imagen_person"/>
+					</div>
+	
+					<div class="chat_whatsApp__agent__target__information__word">
+						<h1>Alberto</h1>
+						<p>Ventas</p>
+					</div>
+				</div>
+				
+
+				<div class="chat_whatsApp__agent__target__icon">
+					<img src='https://www.fletesurgentesmexico.com/wp-content/uploads/2023/06/whatsapp-icon-logo-6E793ACECD-seeklogo.com_.png' alt='whastapp' loading='lazy' />
+				</div>
+				
+
+			</a>	
+			
+			
+			<a href='https://api.whatsapp.com/send?phone=5564632440&text=Hola%20quiero%20cotizar%20mi%20flete' target="_blank" class="chat_whatsApp__agent__target">
+
+				<div class="chat_whatsApp__agent__target__information">
+					<div class="chat_whatsApp__agent__target__information__imagen">
+						<img src="https://www.fletesurgentesmexico.com/wp-content/uploads/2023/06/person-woman.png" alt="imagen_person"/>
+					</div>
+	
+					<div class="chat_whatsApp__agent__target__information__word">
+						<h1>Lety</h1>
+						<p>Ventas</p>
+					</div>
+				</div>
+				
+
+				<div class="chat_whatsApp__agent__target__icon">
+					<img src='https://www.fletesurgentesmexico.com/wp-content/uploads/2023/06/whatsapp-icon-logo-6E793ACECD-seeklogo.com_.png' alt='whastapp' loading='lazy' />
+				</div>
+				
+
+			</a>
+
+		</div>
+	</nav>
+
+    <main>
+
+
+    </main>
+
+    <script >
+        //*WhatsApp
+        const button = document.querySelector('.layout_whatsapp__button')
+        const chat = document.querySelector('.chat_whatsApp')
+
+        function toggleMenu() {
+            chat.classList.toggle('chat_whatsApp--active')
+        }
+
+        button.addEventListener('click', toggleMenu)
+    </script>
+</body>
+
+</html>
