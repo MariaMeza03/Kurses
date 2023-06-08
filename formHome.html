@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+.input {
+  width:75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-top: 30px; }
+  .input input {
+    width: 100%;
+    border: 0px solid transparent; }
+  .input__button {
+    border-bottom: 8px solid #FFC400;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold; }
+    button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    transition: 0.3s; }
+
+    p.error{
+        display: none;
+        color: black;
+        border: 1px solid #00D164;
+        padding: 5px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    p.error--active{
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <main>
+
+        <form class="input" id="form">
+            <input  id="email" name="email" type="text" placeholder="Correo electrónico" width="100%" height="100%"/>
+            <button type="submit" class="input__button">ENVIAR</button>
+        </form>
+
+        <p class="error">Se envio el correo correctamente</p>
+
+    </main>
+
+
+</body>
+
+<script>
+const form = document.getElementById("form")
+const Errors = document.querySelector(".error")
+console.log("Dentro de Script")
+
+//*email
+const mail = document.getElementById("email")
+
+function Validation(e) {
+    e.preventDefault()
+    let datos = new FormData(form);
+
+    peticion = {
+        method:'POST',
+        body:datos,
+    }
+
+    fetch('https://seed2scaleup.com/naturasol/correo.php', peticion)
+    .then(respuesta => respuesta.json)
+    .then(respuesta =>{
+        
+    }).catch(error => console.log('error' , error));
+
+    Errors.classList.add("error--active")
+
+
+}
+
+
+
+form.addEventListener("submit", Validation)
+</script>
+
+</html>
