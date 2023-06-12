@@ -26,7 +26,7 @@
   .carrouselGramaje--prev{
     position: absolute;
     left: 15px;
-    top: 30%;
+    top: 15%;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -46,7 +46,7 @@
   .carrouselGramaje--next{
     position: absolute;
     right: 15px;
-    top: 30%;
+    top: 15%;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -64,25 +64,127 @@
     fill: white;
     opacity: 0.5;
   }
-  .mySwiper{
+
+  /*Barras*/
+
+  .carrouselGramajeBarras--prev{
+    position: absolute;
+    left: 15px;
+    top: 9%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .carrouselGramajeBarras--prev svg{
+    width: 40px;
+    fill: white;
+    opacity: 0.5;
+  }
+
+  .carrouselGramajeBarras--next{
+    position: absolute;
+    right: 15px;
+    top: 9%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .carrouselGramajeBarras--next  svg{
+    width: 40px;
+    fill: white;
+    opacity: 0.5;
+  }
+
+  /*Miel*/
+  .carrouselGramajeMiel--prev{
+    position: absolute;
+    left: 15px;
+    top: 43%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .carrouselGramajeMiel--prev svg{
+    width: 40px;
+    fill: white;
+    opacity: 0.5;
+  }
+
+  .carrouselGramajeMiel--next{
+    position: absolute;
+    right: 15px;
+    top: 43%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .carrouselGramajeMiel--next  svg{
+    width: 40px;
+    fill: white;
+    opacity: 0.5;
+  }
+
+  /*CREMAS */
+  .carrouselGramajeCremas--prev{
+    position: absolute;
+    left: 15px;
+    top: 77%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .carrouselGramajeCremas--prev svg{
+    width: 40px;
+    fill: white;
+    opacity: 0.5;
+  }
+
+  .carrouselGramajeCremas--next{
+    position: absolute;
+    right: 15px;
+    top: 77%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .carrouselGramajeCremas--next  svg{
+    width: 40px;
+    fill: white;
+    opacity: 0.5;
+  }
+
+
+  .swiper__desktop{
     display: none;
   }
   @media(min-width:992px){
-    .mySwiper{
+    .swiper__desktop{
       display: block;
     }
   }
 
-  .mySwiperMovil{
+  .swiper__movil__general{
     display: block;
   }
 
   @media(min-width:992px){
-    .mySwiperMovil{
+    .swiper__movil__general {
       display: none;
     }
   }
- 
+
   .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -96,13 +198,12 @@
   }
 
   .grid_item img{
-    width: 100%;
+    width: 248px;
     height: 247px;
   }
 
   .grid_item p {
     padding-top: 20px;
-    width: 60%;
     margin:  0 auto;
     color: black;
     font-size: 24px;
@@ -113,7 +214,7 @@
 
   }
 
-  @media(min-width:1199px){
+  @media(min-width:1600px){
     .grid{
       grid-template-columns: repeat(4, 1fr);
     }
@@ -135,6 +236,13 @@
     text-align: center;
   }
 
+  @media(max-width:1199px){
+    h2{
+    font-size: 25px;
+    margin-top: 0 !important;
+    }
+  }
+
   .swiper-slide {
     width: 100%;
     height: 100% !important;
@@ -145,10 +253,38 @@
     flex-direction: column;
     padding-bottom: 10px;
   }
+
+  @media(min-width:1199px){
+    .swiper-slide {
+      height: 145% !important;
+      padding-bottom: 80px;
+    }
+  }
+
+  .button_orange{
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    background: linear-gradient(170deg, rgba(2,0,36,1) 0%, rgba(255,215,39,1) 0%, rgba(255,170,0,1) 100%)!important;
+    border-radius: 15px!important;
+    padding: 15px 30px;
+    font-family: 'museo-sans'!important;
+    font-weight: 700;
+    text-shadow: -1px 1px 4px #0000008a!important;
+    font-size: 40px!important;
+    color: #fff;
+    margin-bottom:10px;
+  }
+
+  a{
+      text-decoration: none;
+    }
 </style>
 
 <body>
   <main>
+
+    <div class="swiper__desktop">
       <!-- Swiper -->
       <div class="swiper mySwiper">
 
@@ -158,404 +294,414 @@
             <div class="grid">
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33144.png" alt="history" width="100%" height="100%"/>
-                <p>Miel de abeja cremosa</p>
-                <p style="padding-top: 0px;">450 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras1.png" alt="history" width="100%" height="100%"/>
+                <p>Flowpack barras</p>
+                <p style="padding-top: 0px;">24 g - 35 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33145.png" alt="history" width="100%" height="100%"/>
-                <p>Miel de abeja cremosa</p>
-                <p style="padding-top: 0px;">150 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras2.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Cacahuate</p>
+                <p style="padding-top: 0px;">70 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33146.png" alt="history" width="100%" height="100%"/>
-                <p>Honey & Nuts</p>
-                <p style="padding-top: 0px;">770 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras3.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Cacahuate</p>
+                <p style="padding-top: 0px;">80 g - 100 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33147.png" alt="history" width="100%" height="100%"/>
-                <p>Honey & Nuts</p>
-                <p style="padding-top: 0px;">400 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras4.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Tubazo Cacahuate</p>
+                <p style="padding-top: 0px;">160 g - 185 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33148.png" alt="history" width="100%" height="100%"/>
-                <p>Honey & Nuts</p>
-                <p style="padding-top: 0px;">400 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras5.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Cacahuate</p>
+                <p style="padding-top: 0px;">160 g - 180 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33149.png" alt="history" width="100%" height="100%"/>
-                <p>Honey & Nuts</p>
-                <p style="padding-top: 0px;">400 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras6.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Papas</p>
+                <p style="padding-top: 0px;">18 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33150.png" alt="history" width="100%" height="100%"/>
-                <p>Honey & Nuts</p>
-                <p style="padding-top: 0px;">400 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras7.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Papas</p>
+                <p style="padding-top: 0px;">45 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33151.png" alt="history" width="100%" height="100%"/>
-                <p>Honey & Nuts</p>
-                <p style="padding-top: 0px;">400 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras8.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Papas</p>
+                <p style="padding-top: 0px;">160 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33152.png" alt="history" width="100%" height="100%"/>
-                <p style="width: 100%;">Miel de Abeja Liquida</p>
-                <p style="padding-top: 0px;">730 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras9.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Bobina papas</p>
+                <p style="padding-top: 0px;">260 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33153.png" alt="history" width="100%" height="100%"/>
-                <p  style="width: 100%;" >Miel de Abeja Liquida</p>
-                <p style="padding-top: 0px;">250 g</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras10.png" alt="history" width="100%" height="100%"/>
+                <p  style="width: 100%;" >Bobina papas</p>
+                <p style="padding-top: 0px;">500 g - 550 g</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33154.png" alt="history" width="100%" height="100%"/>
-                <p style="width: 100%;">Miel de abeja Galón</p>
-                <p style="padding-top: 0px;">5.3 kg</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras11.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Bobina Papas</p>
+                <p style="padding-top: 0px;">1 kg</p>
               </div>
 
               <div class="grid_item">
-                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33155.png" alt="history" width="100%" height="100%"/>
-                <p style="width: 100%;">Miel de Abeja Tambo</p>
-                <p style="padding-top: 0px;">290 kg - 300kg</p>
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras12.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Costal de cacahuate</p>
+                <p style="padding-top: 0px;">40 kg</p>
               </div>
 
-                         
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras13.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Vitrolero</p>
+                <p style="padding-top: 0px;">160g - 250 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras14.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Vitrolero</p>
+                <p style="padding-top: 0px;">400g - 550 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras15.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Vitrolero</p>
+                <p style="padding-top: 0px;">800 - 950 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras16.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Vitrolero</p>
+                <p style="padding-top: 0px;">1,13 kg</p>
+              </div>         
               
             </div>
-            <h2>NUECES, SEMILLAS & PAPAS</h2>
-            
+            <h2>BARRAS, CACAHUATES & PAPAS</h2>
+            <a href="https://seed2scaleup.com/naturasol/desarrollo-productos" class="button_orange">Regresar</a>
           </div>
 
           <div class="swiper-slide">
               <div class="grid">
 
                 <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33156.png" alt="history" width="100%" height="100%"/>
-                  <p >Miel de Abeja Cremosa</p>
-                  <p style="padding-top: 0px;">450 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33157.png" alt="history" width="100%" height="100%"/>
-                  <p >Miel de Abeja Cremosa</p>
-                  <p style="padding-top: 0px;">150 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33158.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">770 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33159.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33160.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33161.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33162.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33163.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33164.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33165.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33166.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33167.png" alt="history" width="100%" height="100%"/>
-                  <p >Honey & Nuts</p>
-                  <p style="padding-top: 0px;">400 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33168.png" alt="history" width="100%" height="100%"/>
-                  <p style="width: 100%;">Miel de Abeja Liquida</p>
-                  <p style="padding-top: 0px;">730 g</p>
-                </div>
-
-                <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33169.png" alt="history" width="100%" height="100%"/>
-                  <p  style="width: 100%;" >Miel de Abeja Liquida</p>
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel1.png" alt="history" width="100%" height="100%"/>
+                  <p >Miel de Abeja</p>
                   <p style="padding-top: 0px;">250 g</p>
                 </div>
 
                 <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33170.png" alt="history" width="100%" height="100%"/>
-                  <p style="width: 100%;">Miel de abeja Galón</p>
-                  <p style="padding-top: 0px;">5.3 kg</p>
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel2.png" alt="history" width="100%" height="100%"/>
+                  <p >Miel de Abeja</p>
+                  <p style="padding-top: 0px;">370 g</p>
                 </div>
 
                 <div class="grid_item">
-                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33171.png" alt="history" width="100%" height="100%"/>
-                  <p style="width: 100%;">Miel de Abeja Tambo</p>
-                  <p style="padding-top: 0px;">290 kg - 300kg</p>
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/extra.png" alt="history" width="100%" height="100%"/>
+                  <p >Miel de Abeja</p>
+                  <p style="padding-top: 0px;">500 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel3.png" alt="history" width="100%" height="100%"/>
+                  <p >Miel de Abeja</p>
+                  <p style="padding-top: 0px;">730 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel4.png" alt="history" width="100%" height="100%"/>
+                  <p >Envase Panal Miel</p>
+                  <p style="padding-top: 0px;">300 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel5.png" alt="history" width="100%" height="100%"/>
+                  <p >Envase Panal Miel</p>
+                  <p style="padding-top: 0px;">500 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel6.png" alt="history" width="100%" height="100%"/>
+                  <p >Miel de Abeja</p>
+                  <p style="padding-top: 0px;">1,8 kg</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel7.png" alt="history" width="100%" height="100%"/>
+                  <p >Miel de Abeja</p>
+                  <p style="padding-top: 0px;">5,300 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel8.png" alt="history" width="100%" height="100%"/>
+                  <p >Frasco Miel</p>
+                  <p style="padding-top: 0px;">320 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel9.png" alt="history" width="100%" height="100%"/>
+                  <p >Frasco Miel Cremosa</p>
+                  <p style="padding-top: 0px;">370 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel10.png" alt="history" width="100%" height="100%"/>
+                  <p >Frasco Hexagonal Miel</p>
+                  <p style="padding-top: 0px;">360 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel11.png" alt="history" width="100%" height="100%"/>
+                  <p >Jarabe sabor maple</p>
+                  <p style="padding-top: 0px;">350 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel12.png" alt="history" width="100%" height="100%"/>
+                  <p >Jarabe sabor maple</p>
+                  <p style="padding-top: 0px;">500 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel13.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Jarabe sabor maple</p>
+                  <p style="padding-top: 0px;">660 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel14.png" alt="history" width="100%" height="100%"/>
+                  <p  style="width: 100%;" >Jarabe sabor maple</p>
+                  <p style="padding-top: 0px;">1 kg</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel15.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Jarabe sabor maple</p>
+                  <p style="padding-top: 0px;">700 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel16.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Frasco Miel Cremosa</p>
+                  <p style="padding-top: 0px;">450 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel17.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Frasco Miel Cremosa</p>
+                  <p style="padding-top: 0px;">950 g</p>
                 </div>
 
 
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel18.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Frasco Mermelada</p>
+                  <p style="padding-top: 0px;">300 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel19.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Frasco Mermelada</p>
+                  <p style="padding-top: 0px;">500 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel20.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Frasco Mermelada</p>
+                  <p style="padding-top: 0px;">870 g</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel21.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Frasco Mermelada</p>
+                  <p style="padding-top: 0px;">1,2 kg</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel22.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Envase Ondas Mermelada</p>
+                  <p style="padding-top: 0px;">1 kg</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel23.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Miel de Abeja Cubeta </p>
+                  <p style="padding-top: 0px;">20 kg</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel24.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Miel de Abeja Cubeta </p>
+                  <p style="padding-top: 0px;">27 kg</p>
+                </div>
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel25.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Miel de Abeja en Tote</p>
+                  <p style="padding-top: 0px;"></p>
+                </div>
+
+
+                <div class="grid_item">
+                  <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel26.png" alt="history" width="100%" height="100%"/>
+                  <p style="width: 100%;">Miel de Abeja en Tambo </p>
+                  <p style="padding-top: 0px;"></p>
+                </div>
                 
               </div>
 
-              <h2>MIEL Y MAPLE</h2>
+              <h2>MIEL, MAPLE & MERMELADA</h2>
+              <a href="https://seed2scaleup.com/naturasol/desarrollo-productos" class="button_orange">Regresar</a>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="grid">
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema1.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">200 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema2.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">350 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema3.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">650 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema4.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema5.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Hombros Crema de Avellana</p>
+                <p style="padding-top: 0px;">650 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema6.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Hombros Crema de Avellana</p>
+                <p style="padding-top: 0px;">900 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema7.png" alt="history" width="100%" height="100%"/>
+                <p>Frasco Crema de Avellanas</p>
+                <p style="padding-top: 0px;">770 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema8.png" alt="history" width="100%" height="100%"/>
+                <p>Cubeta Crema de Avellana</p>
+                <p style="padding-top: 0px;">4.5 kg</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema9.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">170 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema10.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">300 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema11.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">550 g</p>
+              </div> 
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema12.png" alt="history" width="100%" height="100%"/>
+                <p>Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">900 g</p>
+              </div> 
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema13.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Hombros Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema14.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Hombros Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">850 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema15.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">250 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema16.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">330 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema17.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema18.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">660 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema19.png" alt="history" width="100%" height="100%"/>
+                <p  style="width: 100%;" >Frasco Cajeta</p>
+                <p style="padding-top: 0px;">300 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema20.png" alt="history" width="100%" height="100%"/>
+                <p  style="width: 100%;" >Frasco Cajeta</p>
+                <p style="padding-top: 0px;">870 g</p>
+              </div>
+
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema21.png" alt="history" width="100%" height="100%"/>
+                <p  style="width: 100%;" >Envase Ondas Cajeta</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+ 
+            </div>
+            <h2>CREMAS & CAJETAS</h2>
+            <a href="https://seed2scaleup.com/naturasol/desarrollo-productos" class="button_orange">Regresar</a>
+            
           </div>
           
-        </div>
-      </div>
-
-
-      <div class="swiper mySwiperMovil">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33144.png" alt="history" width="100%" height="100%"/>
-              <p>Miel de abeja cremosa</p>
-              <p style="padding-top: 0px;">450 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33145.png" alt="history" width="100%" height="100%"/>
-              <p>Miel de abeja cremosa</p>
-              <p style="padding-top: 0px;">150 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33146.png" alt="history" width="100%" height="100%"/>
-              <p>Honey & Nuts</p>
-              <p style="padding-top: 0px;">770 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33147.png" alt="history" width="100%" height="100%"/>
-              <p>Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33148.png" alt="history" width="100%" height="100%"/>
-              <p>Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33149.png" alt="history" width="100%" height="100%"/>
-              <p>Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33150.png" alt="history" width="100%" height="100%"/>
-              <p>Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33151.png" alt="history" width="100%" height="100%"/>
-              <p>Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33152.png" alt="history" width="100%" height="100%"/>
-              <p style="width: 100%;">Miel de Abeja Liquida</p>
-              <p style="padding-top: 0px;">730 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33153.png" alt="history" width="100%" height="100%"/>
-              <p  style="width: 100%;" >Miel de Abeja Liquida</p>
-              <p style="padding-top: 0px;">250 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33154.png" alt="history" width="100%" height="100%"/>
-              <p style="width: 100%;">Miel de abeja Galón</p>
-              <p style="padding-top: 0px;">5.3 kg</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33155.png" alt="history" width="100%" height="100%"/>
-              <p style="width: 100%;">Miel de Abeja Tambo</p>
-              <p style="padding-top: 0px;">290 kg - 300kg</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33156.png" alt="history" width="100%" height="100%"/>
-              <p >Miel de Abeja Cremosa</p>
-              <p style="padding-top: 0px;">450 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33157.png" alt="history" width="100%" height="100%"/>
-              <p >Miel de Abeja Cremosa</p>
-              <p style="padding-top: 0px;">150 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33158.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">770 g</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33159.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33160.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33161.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33162.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33163.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33164.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33165.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33166.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33167.png" alt="history" width="100%" height="100%"/>
-              <p >Honey & Nuts</p>
-              <p style="padding-top: 0px;">400 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33168.png" alt="history" width="100%" height="100%"/>
-              <p style="width: 100%;">Miel de Abeja Liquida</p>
-              <p style="padding-top: 0px;">730 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33169.png" alt="history" width="100%" height="100%"/>
-              <p  style="width: 100%;" >Miel de Abeja Liquida</p>
-              <p style="padding-top: 0px;">250 g</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33170.png" alt="history" width="100%" height="100%"/>
-              <p style="width: 100%;">Miel de abeja Galón</p>
-              <p style="padding-top: 0px;">5.3 kg</p>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="grid_item">
-              <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Grupo-33171.png" alt="history" width="100%" height="100%"/>
-              <p style="width: 100%;">Miel de Abeja Tambo</p>
-              <p style="padding-top: 0px;">290 kg - 300kg</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -594,6 +740,649 @@
             </g> 
           </svg>
         </div>
+
+    </div>
+
+    <!-- MOVILBARRAS         -->
+    <div class="swiper__movil__general">
+      <div>
+
+        <div class="swiper mySwiperMovilBarras">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras1.png" alt="history" width="100%" height="100%"/>
+                <p>Flowpack barras</p>
+                <p style="padding-top: 0px;">24 g - 35 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras2.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Cacahuate</p>
+                <p style="padding-top: 0px;">70 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras3.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Cacahuate</p>
+                <p style="padding-top: 0px;">80 g - 100 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras4.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Tubazo Cacahuate</p>
+                <p style="padding-top: 0px;"> 160 g - 185 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras5.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Cacahuate</p>
+                <p style="padding-top: 0px;">160 g - 180 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras6.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Papas</p>
+                <p style="padding-top: 0px;">18 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras7.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Papas</p>
+                <p style="padding-top: 0px;">45 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras8.png" alt="history" width="100%" height="100%"/>
+                <p>Bobina Papas</p>
+                <p style="padding-top: 0px;">160 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras9.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Bobina Papas</p>
+                <p style="padding-top: 0px;">260 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras10.png" alt="history" width="100%" height="100%"/>
+                <p  style="width: 100%;" >Bobina Papas</p>
+                <p style="padding-top: 0px;">500 g - 550 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras11.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Bobina Papas</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras12.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Costal de cacahuate</p>
+                <p style="padding-top: 0px;">40 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras13.png" alt="history" width="100%" height="100%"/>
+                <p >Vitrolero</p>
+                <p style="padding-top: 0px;">160g - 250 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras14.png" alt="history" width="100%" height="100%"/>
+                <p >Vitrolero</p>
+                <p style="padding-top: 0px;">400g - 550 g</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras15.png" alt="history" width="100%" height="100%"/>
+                <p >Vitrolero</p>
+                <p style="padding-top: 0px;">800 - 950 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Barras16.png" alt="history" width="100%" height="100%"/>
+                <p >Vitrolero</p>
+                <p style="padding-top: 0px;">1,13 kg</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+
+        <h2>BARRAS, CACAHUATES & PAPAS</h2>
+  
+        <div class="carrouselGramajeBarras--prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="120" viewBox="0 0 62 120"> 
+            <g id="Grupo_33141" data-name="Grupo 33141" transform="translate(1897 5723) rotate(180)"> 
+              <g id="btn-round-outline-light" transform="translate(1995 5427) rotate(90)"> 
+                <g id="btn-bg" transform="translate(176 98)" fill="#f7f7f7" stroke="#8bc04b" stroke-width="2"> 
+                  <rect width="120" height="62" rx="31" stroke="none"/> 
+                  <rect x="1" y="1" width="118" height="60" rx="30" fill="none"/> 
+                </g> 
+              </g> 
+              <g id="chevron-right-Filled" transform="translate(1839 5635)"> 
+                <rect id="Path" width="58" height="57" fill="rgba(255,255,255,0)"/> 
+                <path id="chevron-right-Filled_1_" d="M955.876,2652.43l-21.75,21.375a2.445,2.445,0,0,1-3.417,0,2.344,2.344,0,0,1,0-3.358l20.042-19.7-20.042-19.7a2.344,2.344,0,0,1,0-3.358,2.443,2.443,0,0,1,3.417,0l21.75,21.375A2.343,2.343,0,0,1,955.876,2652.43Z" transform="translate(-913.084 -2622.251)" fill="#41416e"/> 
+              </g> 
+            </g> 
+          </svg>
+        </div>
+        
+        <div class="carrouselGramajeBarras--next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="120" viewBox="0 0 62 120"> 
+            <g id="Grupo_32909" data-name="Grupo 32909" transform="translate(-1835 -5603)"> 
+              <g id="btn-round-outline-light" transform="translate(1995 5427) rotate(90)"> 
+                <g id="btn-bg" transform="translate(176 98)" fill="#f7f7f7" stroke="#8bc04b" stroke-width="2"> 
+                  <rect width="120" height="62" rx="31" stroke="none"/> 
+                  <rect x="1" y="1" width="118" height="60" rx="30" fill="none"/> 
+                </g> 
+              </g> 
+              <g id="chevron-right-Filled" transform="translate(1839 5635)"> 
+                <rect id="Path" width="58" height="57" fill="rgba(255,255,255,0)"/> 
+                <path id="chevron-right-Filled_1_" d="M955.876,2652.43l-21.75,21.375a2.445,2.445,0,0,1-3.417,0,2.344,2.344,0,0,1,0-3.358l20.042-19.7-20.042-19.7a2.344,2.344,0,0,1,0-3.358,2.443,2.443,0,0,1,3.417,0l21.75,21.375A2.343,2.343,0,0,1,955.876,2652.43Z" transform="translate(-913.084 -2622.251)" fill="#41416e"/> 
+              </g> 
+            </g> 
+          </svg>
+        </div>
+      </div>
+  
+      <div>
+        <div class="swiper mySwiperMovilMiel">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel1.png" alt="history" width="100%" height="100%"/>
+                <p >Miel de Abeja</p>
+                <p style="padding-top: 0px;">250 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel2.png" alt="history" width="100%" height="100%"/>
+                <p >Miel de Abeja</p>
+                <p style="padding-top: 0px;">370 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/extra.png" alt="history" width="100%" height="100%"/>
+                <p >Miel de Abeja</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel3.png" alt="history" width="100%" height="100%"/>
+                <p >Miel de Abeja</p>
+                <p style="padding-top: 0px;">730 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel4.png" alt="history" width="100%" height="100%"/>
+                <p >Envase Panal Miel</p>
+                <p style="padding-top: 0px;">300 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel5.png" alt="history" width="100%" height="100%"/>
+                <p >Envase Panal Miel</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel6.png" alt="history" width="100%" height="100%"/>
+                <p >Miel de Abeja</p>
+                <p style="padding-top: 0px;">1,8 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel7.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Miel de Abeja</p>
+                <p style="padding-top: 0px;">5,300 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel8.png" alt="history" width="100%" height="100%"/>
+                <p  style="width: 100%;" >Frasco Miel</p>
+                <p style="padding-top: 0px;">320 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel9.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Miel Cremosa</p>
+                <p style="padding-top: 0px;">370 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel10.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Hexagonal Miel</p>
+                <p style="padding-top: 0px;">360 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel11.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Jarabe sabor maple</p>
+                <p style="padding-top: 0px;">350 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel12.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Jarabe sabor maple</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel13.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Jarabe sabor maple</p>
+                <p style="padding-top: 0px;">660 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel14.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Jarabe sabor maple</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel15.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Jarabe sabor maple</p>
+                <p style="padding-top: 0px;">700 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel16.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Miel Cremosa</p>
+                <p style="padding-top: 0px;">450 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel17.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Miel Cremosa</p>
+                <p style="padding-top: 0px;">950 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel18.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Mermelada</p>
+                <p style="padding-top: 0px;">300 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel19.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Mermelada</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel20.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Mermelada</p>
+                <p style="padding-top: 0px;">870 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel21.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Mermelada</p>
+                <p style="padding-top: 0px;">1,2 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel22.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas  Mermelada</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel23.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Miel de Abeja Cubeta</p>
+                <p style="padding-top: 0px;">20 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel24.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Miel de Abeja Cubeta</p>
+                <p style="padding-top: 0px;">27 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel25.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Miel de Abeja en Tote</p>
+                <p style="padding-top: 0px;"></p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Miel26.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Miel de Abeja en Tambo</p>
+                <p style="padding-top: 0px;"></p>
+              </div>
+            </div>
+  
+          
+  
+          </div>
+  
+        </div>
+        <h2>MIEL , MAPLE & MERMELADA</h2>
+        <div class="carrouselGramajeMiel--prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="120" viewBox="0 0 62 120"> 
+            <g id="Grupo_33141" data-name="Grupo 33141" transform="translate(1897 5723) rotate(180)"> 
+              <g id="btn-round-outline-light" transform="translate(1995 5427) rotate(90)"> 
+                <g id="btn-bg" transform="translate(176 98)" fill="#f7f7f7" stroke="#8bc04b" stroke-width="2"> 
+                  <rect width="120" height="62" rx="31" stroke="none"/> 
+                  <rect x="1" y="1" width="118" height="60" rx="30" fill="none"/> 
+                </g> 
+              </g> 
+              <g id="chevron-right-Filled" transform="translate(1839 5635)"> 
+                <rect id="Path" width="58" height="57" fill="rgba(255,255,255,0)"/> 
+                <path id="chevron-right-Filled_1_" d="M955.876,2652.43l-21.75,21.375a2.445,2.445,0,0,1-3.417,0,2.344,2.344,0,0,1,0-3.358l20.042-19.7-20.042-19.7a2.344,2.344,0,0,1,0-3.358,2.443,2.443,0,0,1,3.417,0l21.75,21.375A2.343,2.343,0,0,1,955.876,2652.43Z" transform="translate(-913.084 -2622.251)" fill="#41416e"/> 
+              </g> 
+            </g> 
+          </svg>
+        </div>
+        
+        <div class="carrouselGramajeMiel--next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="120" viewBox="0 0 62 120"> 
+            <g id="Grupo_32909" data-name="Grupo 32909" transform="translate(-1835 -5603)"> 
+              <g id="btn-round-outline-light" transform="translate(1995 5427) rotate(90)"> 
+                <g id="btn-bg" transform="translate(176 98)" fill="#f7f7f7" stroke="#8bc04b" stroke-width="2"> 
+                  <rect width="120" height="62" rx="31" stroke="none"/> 
+                  <rect x="1" y="1" width="118" height="60" rx="30" fill="none"/> 
+                </g> 
+              </g> 
+              <g id="chevron-right-Filled" transform="translate(1839 5635)"> 
+                <rect id="Path" width="58" height="57" fill="rgba(255,255,255,0)"/> 
+                <path id="chevron-right-Filled_1_" d="M955.876,2652.43l-21.75,21.375a2.445,2.445,0,0,1-3.417,0,2.344,2.344,0,0,1,0-3.358l20.042-19.7-20.042-19.7a2.344,2.344,0,0,1,0-3.358,2.443,2.443,0,0,1,3.417,0l21.75,21.375A2.343,2.343,0,0,1,955.876,2652.43Z" transform="translate(-913.084 -2622.251)" fill="#41416e"/> 
+              </g> 
+            </g> 
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <div class="swiper mySwiperMovilCremas">
+          <div class="swiper-wrapper">
+           
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema1.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">200 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema2.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">350 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema3.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">650 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema4.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Avellana</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+            </div>
+  
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema5.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Hombros Crema de Avellana</p>
+                <p style="padding-top: 0px;">650 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema6.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Hombros Crema de Avellana</p>
+                <p style="padding-top: 0px;">900 g</p>
+              </div>
+            </div>
+            
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema7.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Crema de Avellanas</p>
+                <p style="padding-top: 0px;">770 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema8.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Cubeta Crema de Avellana</p>
+                <p style="padding-top: 0px;">4.5 kg</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema9.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">170 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema10.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">300 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema11.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">550 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema12.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">900 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema13.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Hombros Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema14.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Hombros Crema de Cacahuate</p>
+                <p style="padding-top: 0px;">850 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema15.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">250 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema16.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">330 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema17.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">500 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema18.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Cajeta</p>
+                <p style="padding-top: 0px;">660 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema19.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Cajeta</p>
+                <p style="padding-top: 0px;">300 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema20.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Frasco Cajeta</p>
+                <p style="padding-top: 0px;">870 g</p>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="grid_item">
+                <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/06/Crema21.png" alt="history" width="100%" height="100%"/>
+                <p style="width: 100%;">Envase Ondas Cajeta</p>
+                <p style="padding-top: 0px;">1 kg</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+        <h2>CREMAS & CAJETAS</h2>
+        <div class="carrouselGramajeCremas--prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="120" viewBox="0 0 62 120"> 
+            <g id="Grupo_33141" data-name="Grupo 33141" transform="translate(1897 5723) rotate(180)"> 
+              <g id="btn-round-outline-light" transform="translate(1995 5427) rotate(90)"> 
+                <g id="btn-bg" transform="translate(176 98)" fill="#f7f7f7" stroke="#8bc04b" stroke-width="2"> 
+                  <rect width="120" height="62" rx="31" stroke="none"/> 
+                  <rect x="1" y="1" width="118" height="60" rx="30" fill="none"/> 
+                </g> 
+              </g> 
+              <g id="chevron-right-Filled" transform="translate(1839 5635)"> 
+                <rect id="Path" width="58" height="57" fill="rgba(255,255,255,0)"/> 
+                <path id="chevron-right-Filled_1_" d="M955.876,2652.43l-21.75,21.375a2.445,2.445,0,0,1-3.417,0,2.344,2.344,0,0,1,0-3.358l20.042-19.7-20.042-19.7a2.344,2.344,0,0,1,0-3.358,2.443,2.443,0,0,1,3.417,0l21.75,21.375A2.343,2.343,0,0,1,955.876,2652.43Z" transform="translate(-913.084 -2622.251)" fill="#41416e"/> 
+              </g> 
+            </g> 
+          </svg>
+        </div>
+        
+        <div class="carrouselGramajeCremas--next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="62" height="120" viewBox="0 0 62 120"> 
+            <g id="Grupo_32909" data-name="Grupo 32909" transform="translate(-1835 -5603)"> 
+              <g id="btn-round-outline-light" transform="translate(1995 5427) rotate(90)"> 
+                <g id="btn-bg" transform="translate(176 98)" fill="#f7f7f7" stroke="#8bc04b" stroke-width="2"> 
+                  <rect width="120" height="62" rx="31" stroke="none"/> 
+                  <rect x="1" y="1" width="118" height="60" rx="30" fill="none"/> 
+                </g> 
+              </g> 
+              <g id="chevron-right-Filled" transform="translate(1839 5635)"> 
+                <rect id="Path" width="58" height="57" fill="rgba(255,255,255,0)"/> 
+                <path id="chevron-right-Filled_1_" d="M955.876,2652.43l-21.75,21.375a2.445,2.445,0,0,1-3.417,0,2.344,2.344,0,0,1,0-3.358l20.042-19.7-20.042-19.7a2.344,2.344,0,0,1,0-3.358,2.443,2.443,0,0,1,3.417,0l21.75,21.375A2.343,2.343,0,0,1,955.876,2652.43Z" transform="translate(-913.084 -2622.251)" fill="#41416e"/> 
+              </g> 
+            </g> 
+          </svg>
+        </div>
+      </div>
+
+    </div>
+    
+
+
   </main>
  
 
@@ -613,18 +1402,46 @@
   </script>
 
   <script>
-    var swiperMovil = new Swiper(".mySwiperMovil", {
+    var swiperMovil = new Swiper(".mySwiperMovilBarras", {
       slidesPerView: 1,
       grid: {
         rows: 1,
       },
       spaceBetween: 30,
       navigation: {
-            nextEl: '.carrouselGramaje--next',
-            prevEl: '.carrouselGramaje--prev',
+            nextEl: '.carrouselGramajeBarras--next',
+            prevEl: '.carrouselGramajeBarras--prev',
             },
     });
   </script>
+
+<script>
+  var swiperMovilMiel = new Swiper(".mySwiperMovilMiel", {
+    slidesPerView: 1,
+    grid: {
+      rows: 1,
+    },
+    spaceBetween: 30,
+    navigation: {
+          nextEl: '.carrouselGramajeMiel--next',
+          prevEl: '.carrouselGramajeMiel--prev',
+          },
+  });
+</script>
+
+<script>
+  var swiperMovilCremas = new Swiper(".mySwiperMovilCremas", {
+    slidesPerView: 1,
+    grid: {
+      rows: 1,
+    },
+    spaceBetween: 30,
+    navigation: {
+          nextEl: '.carrouselGramajeCremas--next',
+          prevEl: '.carrouselGramajeCremas--prev',
+          },
+  });
+</script>
 </body>
 
 </html>
