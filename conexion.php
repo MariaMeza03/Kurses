@@ -4,11 +4,11 @@
 
       $data = array(
         "ZipCodeFrom"=> "05120",
-        "ZipCodeTo"=>"06000",
+        "ZipCodeTo"=>"02100",
         "Content"=> "Producto",
         
         "Parcel"=> array (
-              "Weight"=> 350,
+              "Weight"=> 1,
             "Width"=> 10,
             "Height"=> 10,
             "Length"=> 10
@@ -29,17 +29,17 @@
             ),
             
         "AddressTo"=> array (
-            "ZipCode"=> "97206",
-            "State"=> "MX-YUC",
-            "City"=> "Yucatán",
-            "Neighborhood"=> "El Rosario",
-            "Address1"=> "Calle 29 A Exterior 302",
+            "ZipCode"=> "02100",
+            "State"=> "MX-CMX",
+            "City"=> "Ciudad de México",
+            "Neighborhood"=> "Azcapotzalco",
+            "Address1"=> " El Rosario",
             "Address2"=> "por 26 A y 26 B",
             "CityId"=> null,
             "CityName"=> null,
             "Country"=> "MX",
             "International"=>false,
-            "UserState"=> "MX-YUC"
+            "UserState"=> "MX-CMX"
             ),
             
         "Sender"=> array  (
