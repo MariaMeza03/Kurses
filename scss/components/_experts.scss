@@ -4,7 +4,7 @@
 	position: relative;
     height: auto;
 
-	&--next{
+	&--next_movil{
 		position: absolute;
         right: 0;
 		bottom: 0%;
@@ -34,7 +34,7 @@
             gap: 40px;
 
             &__imagen{
-                width: 100%;
+                width: 70%;
 
                 img{
                     width: 100%;
@@ -56,7 +56,7 @@
     }
 }
 
-.swiper {
+.swiper_movil {
 	width: 100%;
 	height: 100%;
 
@@ -86,19 +86,22 @@
             position:inherit;
             display: flex;
             justify-content: flex-end;
-            padding: 20px 50px 0 50px ;
+            padding: 20px 50px 10px 50px ;
         }
 
         .swiper-pagination-bullet{
             width: 10px;
             height: 10px;
             background-color: #6FB830;
+            border: 1px solid #A2A2A2;
             opacity:1;
             
         }
 
         .swiper-pagination-bullet-active {
-            background-color:#A2A2A2;
+            width: 10px;
+            height: 10px;
+            background-color: #A2A2A2;
             border: 1px solid #A2A2A2;
             
         }

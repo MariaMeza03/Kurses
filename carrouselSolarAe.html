@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
-
 <style>
   .carrouselSolarAe {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: auto;}
+  height: auto;
+  background: red; }
   .carrouselSolarAe--next {
     position: absolute;
     right: 15px;
@@ -23,10 +23,17 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    z-index: 2; }
+    z-index: 2;
+    border: 1px solid white;
+    padding: 7px; }
     .carrouselSolarAe--next svg {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      fill: white; }
+    .carrouselSolarAe--next:hover {
+      background-color: black;
+      border: 1px solid  #00cc00;
+      cursor: pointer; }
   .carrouselSolarAe--prev {
     position: absolute;
     left: 15px;
@@ -35,10 +42,16 @@
     height: 45px;
     border-radius: 50%;
     z-index: 2;
-    transform: rotate(180deg); }
+    border: 1px solid white;
+    padding: 7px; }
     .carrouselSolarAe--prev svg {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      fill: white; }
+    .carrouselSolarAe--prev:hover {
+      background-color: black;
+      border: 1px solid #00cc00;
+      cursor: pointer; }
   .carrouselSolarAe__form {
     display: flex;
     align-items: center;
@@ -97,8 +110,6 @@
     background-color: white;
     border: 1px solid white; }
 </style>
-
-
 <body>
 
     <main>
@@ -156,17 +167,15 @@
 			<!-- If we need navigation buttons -->
 
       <div class="carrouselSolarAe--prev">
-        <svg id="chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none"> 
-          <rect id="chevron-right-circle_Background_" data-name="chevron-right-circle (Background)" width="36" height="36"/> 
-          <path id="chevron-right-circle-2" data-name="chevron-right-circle" d="M16,32A16,16,0,1,1,32,16,16.018,16.018,0,0,1,16,32ZM16,2.285A13.714,13.714,0,1,0,29.713,16,13.73,13.73,0,0,0,16,2.285ZM13.517,24l0,0L11.9,22.383,18.285,16,11.9,9.617,13.517,8l8,8-8,8Z" transform="translate(2 2)" fill="rgba(255,255,255,0.9)"/> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
         </svg>
       </div>
 			
 			<div class="carrouselSolarAe--next">
-				<svg id="chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none"> 
-                  <rect id="chevron-right-circle_Background_" data-name="chevron-right-circle (Background)" width="36" height="36" /> 
-                  <path id="chevron-right-circle-2" data-name="chevron-right-circle" d="M16,32A16,16,0,1,1,32,16,16.018,16.018,0,0,1,16,32ZM16,2.285A13.714,13.714,0,1,0,29.713,16,13.73,13.73,0,0,0,16,2.285ZM13.517,24l0,0L11.9,22.383,18.285,16,11.9,9.617,13.517,8l8,8-8,8Z" transform="translate(2 2)" fill="rgba(255,255,255,0.9)"/> 
-              </svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
 			</div>
 
 		</div>

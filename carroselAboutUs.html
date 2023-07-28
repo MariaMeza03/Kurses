@@ -2,19 +2,21 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" type="image/x-icon" href="public/favicon.ico" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+ 
 </head>
+
 <style>
-    .experts {
+.experts {
   width: 100%;
   overflow: hidden;
   position: relative;
   height: auto; }
-  .experts--next {
+  .experts--next_movil {
     position: absolute;
     right: 0;
     bottom: 0%;
@@ -22,7 +24,7 @@
     height: 30px;
     border-radius: 50%;
     z-index: 2; }
-    .experts--next svg {
+    .experts--next_movil svg {
       width: 100%;
       height: 100%;
       fill: black; }
@@ -38,7 +40,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 40px; }
       .experts__form__grid__imagen {
-        width: 100%; }
+        width: 70%; }
         .experts__form__grid__imagen img {
           width: 100%;
           height: 100%; }
@@ -48,10 +50,10 @@
       .experts__form__text p {
         text-align: center; }
 
-.swiper {
+.swiper_movil {
   width: 100%;
   height: 100%; }
-  .swiper .swiper-slide {
+  .swiper_movil .swiper-slide {
     width: 100% !important;
     height: 100%;
     display: flex;
@@ -67,114 +69,113 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center; }
-  .swiper .swiper-horizontal > .swiper-pagination-bullets, .swiper .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper .swiper-pagination-custom, .swiper .swiper-pagination-fraction {
-    width: auto;
+  .swiper_movil .swiper-horizontal > .swiper-pagination-bullets, .swiper_movil .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper_movil .swiper-pagination-custom, .swiper_movil .swiper-pagination-fraction {
+    width: 100%;
     position: inherit;
     display: flex;
     justify-content: flex-end;
-    padding: 20px 50px 0 50px; }
-    
-  .swiper .swiper-pagination-bullet {
+    padding: 20px 50px 0px 50px; }
+  .swiper_movil .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: #6FB830;
     border: 1px solid #A2A2A2;
     opacity: 1; }
-  .swiper .swiper-pagination-bullet-active {
+  .swiper_movil .swiper-pagination-bullet-active {
     width: 10px;
     height: 10px;
     background-color: #A2A2A2;
     border: 1px solid #A2A2A2; }
 </style>
 
-
 <body>
 
     <main>
 
-        <div class="experts">
+    <div class="experts">
 
-			<!-- Slider main container -->
-			<div class="swiper">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide experts__form">
+        <!-- Slider main container -->
+        <div class="swiper_movil">
+            <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide">
 
-                            <div class="experts__form__grid">
+                        <div class="experts__form__grid__imagen">
+                            <img src="https://www.naturasol.com.mx/wp-content/uploads/2023/05/medico.png" alt="history"/>
+                        </div>
+                        
+                    </div>
 
-                                <div class="experts__form__grid__imagen">
-                                    <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-24_08-53-17.jpg" alt="history" width="100%" height="100%"/>
-                                </div>
+                    <div class="swiper-slide">
 
-                                <div class="experts__form__grid__imagen">
-                                    <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-24_08-53-20.jpg" alt="history" width="100%" height="100%"/>
-                                </div>
+                        <div class="experts__form__grid__imagen">
+                            <img src="https://www.naturasol.com.mx/wp-content/uploads/2023/05/empresas-1.png" alt="history">
+                        </div>
+                    
+                    </div>
 
-                                <div class="experts__form__grid__imagen">
-                                    <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-24_08-53-24.jpg" alt="history" width="100%" height="100%"/>
-                                </div>
+                    <div class="swiper-slide">
 
-                            </div>
+                        <div class="experts__form__grid__imagen">
+                            <img src="https://www.naturasol.com.mx/wp-content/uploads/2023/06/reja.png">
+                        </div>
+                    
+                    </div>
 
-                            <div class="experts__form__text">
-                                <p>Somos una empresa mexicana con más de 45 años en el mercado, dedicada al desarrollo, elaboración y comercialización de una gran variedad de productos alimenticios. Estamos presentes en el mercado nacional e internacional con marcas propias y de nuestros clientes. Innovamos y mejoramos para lograr la completa satisfacción de cada uno de nuestros consumidores.</p>
-                            </div>
+                    <div class="swiper-slide">
 
-						</div>
+                        <div class="experts__form__grid__imagen">
+                            <img src="https://www.naturasol.com.mx/wp-content/uploads/2023/06/dispensador.png" alt="history"/>
+                        </div>
+                    
+                    </div>
 
-                        <div class="swiper-slide experts__form">
+                    <div class="swiper-slide">
 
-                            <div class="experts__form__grid">
+                        <div class="experts__form__grid__imagen">
+                            <img src="https://www.naturasol.com.mx/wp-content/uploads/2023/06/cachuates.png" alt="history">
+                        </div>
+                    
+                    </div>
 
-                                <div class="experts__form__grid__imagen">
-                                    <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-24_08-53-17.jpg" alt="history" width="100%" height="100%"/>
-                                </div>
+                    <div class="swiper-slide">
 
-                                <div class="experts__form__grid__imagen">
-                                    <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-24_08-53-20.jpg" alt="history" width="100%" height="100%"/>
-                                </div>
+                        <div class="experts__form__grid__imagen">
+                            <img src="https://www.naturasol.com.mx/wp-content/uploads/2023/06/abejas.png">
+                        </div>
+                    
+                    </div>
 
-                                <div class="experts__form__grid__imagen">
-                                    <img src="https://seed2scaleup.com/naturasol/wp-content/uploads/2023/05/photo_2023-05-24_08-53-24.jpg" alt="history" width="100%" height="100%"/>
-                                </div>
+                </div>
 
-                            </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+        </div>
 
-                            <div class="experts__form__text">
-                                <p>Somos una empresa mexicana con más de 45 años en el mercado, dedicada al desarrollo, elaboración y comercialización de una gran variedad de productos alimenticios. Estamos presentes en el mercado nacional e internacional con marcas propias y de nuestros clientes. Innovamos y mejoramos para lograr la completa satisfacción de cada uno de nuestros consumidores.</p>
-                            </div>
+        <!-- If we need navigation buttons -->
+        
+        <div class="experts--next_movil">
+            <svg id="chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"> 
+                <rect id="chevron-right-circle_Background_" data-name="chevron-right-circle (Background)" width="36" height="36" fill="none"/> 
+                <path id="chevron-right-circle-2" data-name="chevron-right-circle" d="M16,32A16,16,0,1,1,32,16,16.018,16.018,0,0,1,16,32ZM16,2.285A13.714,13.714,0,1,0,29.713,16,13.73,13.73,0,0,0,16,2.285ZM13.517,24l0,0L11.9,22.383,18.285,16,11.9,9.617,13.517,8l8,8-8,8Z" transform="translate(2 2)" fill="rgba(0,0,0,0.9)"/> 
+            </svg>
+        </div>
+        
 
-						</div>
+    </div>
 
-					</div>
 
-				<!-- If we need pagination -->
-				<div class="swiper-pagination"></div>
-	
-			</div>
-
-			<!-- If we need navigation buttons -->
-			
-			<div class="experts--next">
-				<svg id="chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"> 
-                    <rect id="chevron-right-circle_Background_" data-name="chevron-right-circle (Background)" width="36" height="36" fill="none"/> 
-                    <path id="chevron-right-circle-2" data-name="chevron-right-circle" d="M16,32A16,16,0,1,1,32,16,16.018,16.018,0,0,1,16,32ZM16,2.285A13.714,13.714,0,1,0,29.713,16,13.73,13.73,0,0,0,16,2.285ZM13.517,24l0,0L11.9,22.383,18.285,16,11.9,9.617,13.517,8l8,8-8,8Z" transform="translate(2 2)" fill="rgba(0,0,0,0.9)"/> 
-                </svg>
-			</div>
-
-		</div>
 
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiperMovil = new Swiper('.swiper_movil', {
             slidesPerView: 1,
 
             navigation: {
-            nextEl: '.experts--next',
-            prevEl: '.experts--prev',
+            nextEl: '.experts--next_movil',
             },
 
             pagination: {
