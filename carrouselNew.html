@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- Demo styles -->
 
 </head>
 <style>
@@ -17,16 +16,52 @@
   position: relative;
   height: auto;
   background: red; }
+  .carrouselSolarAe--next {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 1px solid white;
+    padding: 7px; }
+    .carrouselSolarAe--next svg {
+      width: 100%;
+      height: 100%;
+      fill: white; }
+    .carrouselSolarAe--next:hover {
+      background-color: black;
+      border: 1px solid  #00cc00;
+      cursor: pointer; }
+  .carrouselSolarAe--prev {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 1px solid white;
+    padding: 7px; }
+    .carrouselSolarAe--prev svg {
+      width: 100%;
+      height: 100%;
+      fill: white; }
+    .carrouselSolarAe--prev:hover {
+      background-color: black;
+      border: 1px solid #00cc00;
+      cursor: pointer; }
   .carrouselSolarAe__form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15px; }
+    padding: 15px 0; }
     .carrouselSolarAe__form p {
+      width: 90%;
       font-size: 18px;
       font-family: 'Poppins', sans-serif;
-      padding-top: 15px;
       color: white;
       text-align: center;
       line-height: 34px; }
@@ -34,6 +69,21 @@
       font-size: 18px;
       font-family: 'Poppins', sans-serif;
       font-weight: bold; }
+    .carrouselSolarAe__form__decoration {
+      padding: 15px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .carrouselSolarAe__form__decoration__circle {
+        width: 40px;
+        height: 20px;
+        background-color: #00CC00;
+        border-radius: 100%; }
+      .carrouselSolarAe__form__decoration hr.line {
+        width: 100%;
+        background-color: white;
+        height: 3px; }
 
 .swiper {
   width: 100%;
@@ -74,6 +124,7 @@
   .swiper .swiper-pagination-bullet-active {
     background-color: white;
     border: 1px solid white; }
+
 </style>
 
 <body>
@@ -85,14 +136,24 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide carrouselSolarAe__form">
-                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1870095901.png" alt="history" width="100%" height="100%"/>
+                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1870095901.png" alt="history" width="90%" height="100%"/>
+                        <div class="carrouselSolarAe__form__decoration">
+                          <hr class="line" style="background-color: transparent; border: 1px solid transparent;"></hr>
+                          <div class="carrouselSolarAe__form__decoration__circle"></div>
+                          <hr class="line"></hr>
+                        </div>
                         <p><span>Evaluación y Análisis Energético:</span> Realizamos
                             una inspección exhaustiva de tu negocio y
                             consumo energético actual para diseñar
                             un sistema solar óptimo y rentable.</p>
                     </div>
                     <div class="swiper-slide carrouselSolarAe__form">
-                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1241798404.png" alt="history" width="100%" height="100%"/>
+                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1241798404.png" alt="history" width="90%" height="100%"/>
+                        <div class="carrouselSolarAe__form__decoration">
+                          <hr class="line"></hr>
+                          <div class="carrouselSolarAe__form__decoration__circle"></div>
+                          <hr class="line"></hr>
+                        </div>
                         <p><span>Diseño a Medida:</span> Nuestro equipo de expertos
                             desarrollará un diseño personalizado para
                             tus paneles solares, teniendo en cuenta
@@ -100,7 +161,12 @@
                             de tu comercio.</p>
                     </div>
                 <div class="swiper-slide carrouselSolarAe__form">
-                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1901530723.png" alt="history" width="100%" height="100%"/>
+                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1901530723.png" alt="history" width="90%" height="100%"/>
+                    <div class="carrouselSolarAe__form__decoration">
+                      <hr class="line"></hr>
+                      <div class="carrouselSolarAe__form__decoration__circle"></div>
+                      <hr class="line"></hr>
+                    </div>
                         <p><span>Instalación Profesional:</span> Contamos con una
                             red de instaladores altamente capacitados
                             para llevar a cabo la implementación del
@@ -108,7 +174,12 @@
                             eficiente y segura.</p>
                 </div>
                 <div class="swiper-slide carrouselSolarAe__form">
-                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_2278971819.png" alt="history" width="100%" height="100%"/>
+                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_2278971819.png" alt="history" width="90%" height="100%"/>
+                    <div class="carrouselSolarAe__form__decoration">
+                      <hr class="line" ></hr>
+                      <div class="carrouselSolarAe__form__decoration__circle"></div>
+                      <hr class="line" style="background-color: transparent; border: 1px solid transparent;"></hr>
+                    </div>
                         <p><span>Independencia energética:</span> Al generar tu
                         propia energía, tu negocio será menos
                         dependiente de las fluctuaciones en los
@@ -116,7 +187,6 @@
                         cortes de suministro.</p>
                 </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
     
         </main>
@@ -129,7 +199,7 @@
   <script>
     var swiper = new Swiper(".mySwiper", {
       direction: "horizontal",
-      slidesPerView: 1,
+      slidesPerView: 3,
       mousewheel: true,
       pagination: {
         el: ".swiper-pagination",

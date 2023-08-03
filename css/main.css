@@ -597,11 +597,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15px; }
+    padding: 15px 0; }
     .carrouselSolarAe__form p {
+      width: 90%;
       font-size: 18px;
       font-family: 'Poppins', sans-serif;
-      padding-top: 15px;
       color: white;
       text-align: center;
       line-height: 34px; }
@@ -609,6 +609,21 @@
       font-size: 18px;
       font-family: 'Poppins', sans-serif;
       font-weight: bold; }
+    .carrouselSolarAe__form__decoration {
+      padding: 15px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .carrouselSolarAe__form__decoration__circle {
+        width: 40px;
+        height: 20px;
+        background-color: #00CC00;
+        border-radius: 100%; }
+      .carrouselSolarAe__form__decoration hr.line {
+        width: 100%;
+        background-color: white;
+        height: 3px; }
 
 .swiper {
   width: 100%;
