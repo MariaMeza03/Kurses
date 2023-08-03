@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Demo styles -->
+
+</head>
+<style>
+  .carrouselSolarAe {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  background: red; }
+  .carrouselSolarAe__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px; }
+    .carrouselSolarAe__form p {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      padding-top: 15px;
+      color: white;
+      text-align: center;
+      line-height: 34px; }
+    .carrouselSolarAe__form span {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold; }
+
+.swiper {
+  width: 100%;
+  height: 100%; }
+  .swiper .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; }
+    @media (min-width: 997px) {
+      .swiper .swiper-slide {
+        width: 50% !important; } }
+    @media (min-width: 1300px) {
+      .swiper .swiper-slide {
+        width: 33.33% !important; } }
+  .swiper .swiper-horizontal > .swiper-pagination-bullets, .swiper .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper .swiper-pagination-custom, .swiper .swiper-pagination-fraction {
+    width: 100%;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 0 50px; }
+  .swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #00CC00;
+    opacity: 1; }
+  .swiper .swiper-pagination-bullet-active {
+    background-color: white;
+    border: 1px solid white; }
+</style>
+
+<body>
+
+    <main>
+
+        <div class="carrouselSolarAe">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide carrouselSolarAe__form">
+                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1870095901.png" alt="history" width="100%" height="100%"/>
+                        <p><span>Evaluación y Análisis Energético:</span> Realizamos
+                            una inspección exhaustiva de tu negocio y
+                            consumo energético actual para diseñar
+                            un sistema solar óptimo y rentable.</p>
+                    </div>
+                    <div class="swiper-slide carrouselSolarAe__form">
+                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1241798404.png" alt="history" width="100%" height="100%"/>
+                        <p><span>Diseño a Medida:</span> Nuestro equipo de expertos
+                            desarrollará un diseño personalizado para
+                            tus paneles solares, teniendo en cuenta
+                            la ubicación, orientación y tamaño
+                            de tu comercio.</p>
+                    </div>
+                <div class="swiper-slide carrouselSolarAe__form">
+                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_1901530723.png" alt="history" width="100%" height="100%"/>
+                        <p><span>Instalación Profesional:</span> Contamos con una
+                            red de instaladores altamente capacitados
+                            para llevar a cabo la implementación del
+                            sistema de paneles solares de manera
+                            eficiente y segura.</p>
+                </div>
+                <div class="swiper-slide carrouselSolarAe__form">
+                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/shutterstock_2278971819.png" alt="history" width="100%" height="100%"/>
+                        <p><span>Independencia energética:</span> Al generar tu
+                        propia energía, tu negocio será menos
+                        dependiente de las fluctuaciones en los
+                        precios de la electricidad y los posibles
+                        cortes de suministro.</p>
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+    
+        </main>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "horizontal",
+      slidesPerView: 1,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>

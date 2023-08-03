@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="./public/logo.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ahorra al máximo en tu pago de luz usando paneles solares</title>
+	<meta name="description" content="Instala Paneles Solares para reducir tu consumo de energía en industrias, comercios, casa habitación y residencias. ¡Entra y deja de pagar luz!" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<link rel="stylesheet" href="css/main.css">
+	
+</head>
+<style>
+.our_products {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background-color: red;
+   }
+  .our_products .container-sm {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px 10px;
+    gap: 30px; }
+    @media (min-width: 768px) {
+      .our_products .container-sm {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 0px; } }
+  .our_products__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .our_products__text h1 {
+      width: 100%;
+      text-align: center;
+      color: #00cc00;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .our_products__text h1 {
+          width: 80%;
+          font-size: 30px; } }
+    .our_products__text p {
+      color: white;
+      margin: 10px; }
+    .our_products__text button {
+      margin: 10px;
+      background-color: #00cc00;
+      padding: 10px 30px; }
+    .our_products__text button:hover {
+      background-color: black;
+      color: #00cc00;
+      border: 1px solid white; }
+  .our_products__carousel {
+    width: 105%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .our_products__carousel__decoration {
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; }
+      .our_products__carousel__decoration__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; }
+        .our_products__carousel__decoration__controls--prev {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          z-index: 2;
+          border: 1px solid white; }
+          .our_products__carousel__decoration__controls--prev svg {
+            width: 30px;
+            fill: white; }
+          .our_products__carousel__decoration__controls--prev:hover {
+            background-color: black;
+            border: 1px solid #00cc00;
+            cursor: pointer; }
+        .our_products__carousel__decoration__controls--next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          z-index: 2;
+          border: 1px solid white; }
+          .our_products__carousel__decoration__controls--next svg {
+            width: 35px;
+            fill: white; }
+          .our_products__carousel__decoration__controls--next:hover {
+            background-color: black;
+            border: 1px solid  #00cc00;
+            cursor: pointer; }
+    .our_products__carousel__imagen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .our_products__carousel__imagen__text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        height: 250px;
+        padding: 20px 10px;
+        text-align: center;
+        width: 100%; }
+        .our_products__carousel__imagen__text h1 {
+          padding-bottom: 10px;
+          color: black;
+          margin-bottom: 0px;
+          font-size: 15px;
+          line-height: 23px; }
+        .our_products__carousel__imagen__text p.one {
+            display: block;
+          font-size: 15px;
+          margin: 0;
+          line-height: 23px;
+          font-weight: 300; }
+          .our_products__carousel__imagen__text p.two {
+            display: none;
+          font-size: 15px;
+          margin: 0;
+          line-height: 23px;
+          font-weight: 300; }
+      .our_products__carousel__imagen__img {
+        width: 100%; }
+        .our_products__carousel__imagen__img img {
+          width: 100%; }
+      .our_products__carousel__imagen a.button_slide {
+        display: none;
+        background-color: white;
+        color: black;
+        border-radius: 24px;
+        padding: 5px 25px;
+        font-weight: bold;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 300; }
+        .our_products__carousel__imagen a.button_slide {
+
+        }
+      .our_products__carousel__imagen:hover .our_products__carousel__imagen__text {
+        background-color: black;
+        color: white;
+        height: 270px;
+        padding: 20px 10px; }
+        .our_products__carousel__imagen:hover .our_products__carousel__imagen__text h1 {
+          color: white; }
+      .our_products__carousel__imagen:hover a.button_slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; }
+
+        .our_products__carousel__imagen:hover p.one {
+        display: none}
+        .our_products__carousel__imagen:hover p.two {
+        display: block}
+    .our_products__carousel .our_products__carousel__imagen:hover {
+      position: relative;
+      z-index: 10;
+      transform: scale(1.05); }
+
+.swiper_products {
+  width: 100%;
+  height: 90%; }
+  .swiper_products .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0px 10px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; }
+    @media (min-width: 997px) {
+      .swiper_products .swiper-slide {
+        width: 50% !important; } }
+    @media (min-width: 1299px) {
+      .swiper_products .swiper-slide {
+        width: 50% !important; } }
+</style>
+
+
+<body>
+
+	<!-- MAIN -->
+	<main class="main">
+
+		<div class="our_products">
+			<div class="container-sm">
+
+                <div class="our_products__carousel">
+					
+                    <!-- Slider main container -->
+                    <div class="swiper_products" >
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            
+                            <!-- Slides -->
+                            <div class="swiper-slide our_products__carousel__imagen">
+
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>Aurora</h1>
+                                    <p class="one">Se presenta en tres categorías diferentes:
+                                    <p class="one">> Monofacial</p>
+                                    <p class="one"> > Bifacial de doble cristal</p>
+                                    <p class="one"> > Bifacial vidrio-transparente</p>
+                                    <p class="one"> > lámina posterior.</p>
+                                    <p class="two">Paneles solares con potencias desde los 325 W hasta los 670 W y rangos de eficiencia del 19,88% al 21,41%</p>
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/aurora.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                               
+                            </div>
+
+                            <div class="swiper-slide our_products__carousel__imagen">
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>Meteoro</h1>
+                                    <p class="one">Mayor bifacialidad (entre 75% y 85%) y
+                                        menor degradación, en comparación
+                                        con las celdas PERC, conduciendo a un
+                                        mayor rendimiento energético.</p>
+                                    <p class="two">Paneles solares con potencias desde
+                                        los 325 W hasta los 670 W y rangos
+                                        de eficiencia del 19,88% al 21,41%.</p>
+                                    
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/meteor.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide our_products__carousel__imagen">
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>Eclipse</h1>
+                                    <p class="one">Módulos de color negro liso, una excelente
+                                        opción para tejados de familias que
+                                        desean destacar su sentido del estilo,
+                                        elegante y sofisticado, en
+                                        su entorno vital.</p>
+                                    
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/eclipse.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide our_products__carousel__imagen">
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>Neptuno</h1>
+                                    <p class="one">Módulos híbridos con hasta un 10 %
+                                        más de rendimiento eléctrico, en
+                                        comparación con los módulos
+                                        fotovoltaicos estándar.</p>
+                                    <p class="two">Paneles solares con potencias desde
+                                        los 370 W hasta los 380 W y rangos
+                                        de eficiencia del 20.31% al 20.86%.</p>
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/neptune.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide our_products__carousel__imagen">
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>Cometa</h1>
+                                    <p class="one">Paneles de heterounión de silicio con
+                                        un coeficiente de temperatura más
+                                        bajo (-0,26°C) y un gran rendimiento
+                                        en condiciones de poca luz, su
+                                        alta eficiencia  supera el 22%.</p>
+                                    <p class="two">Paneles solares con potencias desde
+                                        los 380 W hasta los 700 W y rangos
+                                        de eficiencia del 20.86% al 22.56%</p>
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/comet.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide our_products__carousel__imagen">
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>Thunder</h1>
+                                    <p class="one">Una combinación ganadora de
+                                        eficiencia mejorada, alto vataje y
+                                        estética moderna, los módulos mono
+                                        de 500Wp son totalmente negros.</p>
+                                    <p class="two"> Paneles solares con potencias desde
+                                        los 405 W hasta los 445W y rangos
+                                        de eficiencia del 20.42% al 21.65%.</p>
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/07/thunder.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide our_products__carousel__imagen">
+                                <div class="our_products__carousel__imagen__text">
+                                    <h1>AE smart hot-spot free</h1>
+                                    <p class="one">Disminuyen el impacto del sombreado
+                                        parcial en los módulos fotovoltaicos
+                                        y aumentan su energía de salida y su
+                                        vida útil sin necesidad de realizar
+                                        ningún cambio en la distribución
+                                        de los edificios.</p>
+                                    <p class="two"> Paneles solares con potencias desde
+                                        los 190W hasta los 335W y rangos de
+                                        eficiencia del 18.26% al 20.90%.</p>
+                                    <a class="button_slide">Consulta más modelos</a>
+                                </div>
+
+                                <div class="our_products__carousel__imagen__img">
+                                    <img src="https://solarae-mexico.com/wp-content/uploads/2023/08/smart-p.webp" alt="product_one" width="100%" height="100%" />	 
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+				<div class="our_products__text">
+					<h1>Paneles solares</h1>
+                    <p>Garantía y seguimiento en todos nuestros productos y servicios.</p>
+                    <button>¡Cotizar!</button>
+                    <div class="our_products__carousel__decoration">
+
+                        <div class="our_products__carousel__decoration__controls">
+                            <!-- If we need navigation buttons -->
+                            <div class="our_products__carousel__decoration__controls--prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="our_products__carousel__decoration__controls--next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+				</div>
+
+				
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+        const swiperProducts = new Swiper('.swiper_products', {
+        slidesPerView: 2,
+
+        navigation: {
+        nextEl: '.our_products__carousel__decoration__controls--next',
+        prevEl: '.our_products__carousel__decoration__controls--prev',
+        },
+
+
+    })  
+    </script>
+
+</body>
+
+
+
+
+</html>
