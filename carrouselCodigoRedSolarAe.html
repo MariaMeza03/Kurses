@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+  .carrouselSolarAe {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: auto;}
+  .carrouselSolarAe--next {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 1px solid white;
+    padding: 7px; }
+    .carrouselSolarAe--next svg {
+      width: 100%;
+      height: 100%;
+      fill: white; }
+    .carrouselSolarAe--next:hover {
+      background-color: black;
+      border: 1px solid  #00cc00;
+      cursor: pointer; }
+  .carrouselSolarAe--prev {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 1px solid white;
+    padding: 7px; }
+    .carrouselSolarAe--prev svg {
+      width: 100%;
+      height: 100%;
+      fill: white; }
+    .carrouselSolarAe--prev:hover {
+      background-color: black;
+      border: 1px solid #00cc00;
+      cursor: pointer; }
+  .carrouselSolarAe__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px; }
+    .carrouselSolarAe__form p {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      padding-top: 15px;
+      color: white;
+      text-align: center;
+      line-height: 34px; }
+    .carrouselSolarAe__form span {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold; }
+
+.swiper {
+  width: 90%;
+  height: 100%; }
+  .swiper .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; }
+    @media (min-width: 997px) {
+      .swiper .swiper-slide {
+        width: 100% !important; } }
+    @media (min-width: 1300px) {
+      .swiper .swiper-slide {
+        width: 100% !important; } }
+  .swiper .swiper-horizontal > .swiper-pagination-bullets, .swiper .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper .swiper-pagination-custom, .swiper .swiper-pagination-fraction {
+    width: 100%;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 0 50px; }
+  .swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #00CC00;
+    opacity: 1; }
+  .swiper .swiper-pagination-bullet-active {
+    background-color: white;
+    border: 1px solid white; }
+</style>
+<body>
+
+    <main>
+
+    <div class="carrouselSolarAe">
+
+			<!-- Slider main container -->
+			<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+                        <div class="swiper-slide carrouselSolarAe__form">
+                            <img src="https://solarae-mexico.com/wp-content/uploads/2023/08/r-consumo.webp" alt="history" width="100%" height="100%"/>
+                            <p>Con la implementación de la norma ISO 50001, podrás
+                                identificar <span> oportunidades de ahorro energético y reducir
+                                significativamente tu consumo.</span> </p>
+                        </div>
+
+                        <div class="swiper-slide carrouselSolarAe__form">
+                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/08/mini-huella.webp" alt="history" width="100%" height="100%"/>
+                        <p>Al mejorar la eficiencia energética, <span> contribuirás a la
+                            reducción de emisiones de carbono</span> y al cuidado
+                            del medio ambiente.</p>
+                        </div>
+
+                        <div class="swiper-slide carrouselSolarAe__form">
+                        <img src="https://solarae-mexico.com/wp-content/uploads/2023/08/gene-ahorros.webp" alt="history" width="100%" height="100%"/>
+                        <p>La gestión eficiente de la energía te permitirá obtener
+                            <span> ahorros significativos en tus costos energéticos.</span></p>
+                        </div>
+
+					</div>
+
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+	
+			</div>
+
+
+			<!-- If we need navigation buttons -->
+
+            <!-- <div class="carrouselSolarAe--prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+            </div>
+			
+			<div class="carrouselSolarAe--next">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+			</div> -->
+
+		</div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: "auto",
+
+            navigation: {
+            nextEl: '.carrouselSolarAe--next',
+            prevEl: '.carrouselSolarAe--prev',
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+
+        }) 
+    </script>
+
+
+</body>
+
+</html>
