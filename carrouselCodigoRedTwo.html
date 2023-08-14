@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+</head>
+<style>
+  .carrouselSolarAeTwo {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: auto;}
+  .carrouselSolarAeTwo--next {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 1px solid  black;
+    padding: 7px; }
+    .carrouselSolarAeTwo--next svg {
+      width: 100%;
+      height: 100%;
+      fill:  black; }
+      .carrouselSolarAeTwo--next:hover svg{
+        fill:  white;
+      }
+    .carrouselSolarAeTwo--next:hover {
+      background-color: black;
+      border: 1px solid  #00cc00;
+      cursor: pointer; }
+  .carrouselSolarAeTwo--prev {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 1px solid  black;
+    padding: 7px; }
+    .carrouselSolarAeTwo--prev svg {
+      width: 100%;
+      height: 100%;
+      fill:  black; }
+      .carrouselSolarAeTwo--prev:hover svg{
+        fill:  white;
+      }
+    .carrouselSolarAeTwo--prev:hover {
+      background-color: black;
+      border: 1px solid #00cc00;
+      cursor: pointer; }
+      
+    .carrouselSolarAeTwo__form--one{
+        width: 100%;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: 1199px) {
+      .carrouselSolarAeTwo__form--one{
+        grid-template-columns: repeat(2, 1fr); } }
+
+    .carrouselSolarAeTwo__form--one__information{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/07/Rectangulo-7343.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 15px;
+    }
+    @media (min-width: 1199px) {
+        .carrouselSolarAeTwo__form--one__information{
+            padding: 60px; } }
+
+    .carrouselSolarAeTwo__form--one__information p {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      padding-top: 15px;
+      color: white;
+      text-align: center;
+      line-height: 34px; }
+      
+      .carrouselSolarAeTwo__form--one__information h1 {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      color: #00cc00;
+      text-align: center;
+      line-height: 34px; }
+
+.swiper {
+  width: 90%;
+  height: 100%; }
+  .swiper .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; }
+ .swiper .swiper-horizontal > .swiper-pagination-bullets, .swiper_two .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper_two .swiper-pagination-custom, .swiper_two .swiper-pagination-fraction {
+    width: 100%;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; }
+    .swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #00CC00;
+    opacity: 1; }
+    .swiper .swiper-pagination-bullet-active {
+    background-color: white;
+    border: 1px solid white; }
+</style>
+<body>
+
+    <main>
+
+    <div class="carrouselSolarAeTwo">
+
+			<!-- Slider main container -->
+			<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+                        <div class="swiper-slide ">
+                            <div class="carrouselSolarAeTwo__form--one" style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Programas de financiamiento e incentivos</h1>
+                                    <p>Accede a líneas de crédito a tasas preferenciales y aprovecha programas de apoyo financiero e incentivos nacionales e internacionales.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="carrouselSolarAeTwo__form--one" style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Operaciones y gestión</h1>
+                                    <p>Obtén ahorros de energía, reduce costos y adquiere un perfecto conocimiento y medición del consumo de energía en tus instalaciones.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="carrouselSolarAeTwo__form--one"  style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Cumplimiento legal</h1>
+                                    <p>Evita multas y asegura el cumplimiento de la normatividad local relacionada con la gestión de energía.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="carrouselSolarAeTwo__form--one"  style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Sustentabilidad</h1>
+                                    <p>Contribuye a la disminución de la huella de carbono y mitigar el impacto ambiental de tus operaciones.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide ">
+                            <div class="carrouselSolarAeTwo__form--one"  style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Ventas e imagen</h1>
+                                    <p>Mejora tu imagen empresarial al ser reconocida como una empresa responsable con el medio ambiente. Además, ten en cuenta que muchas empresas comenzarán a exigir la certificación ISO 50001 a sus proveedores.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="carrouselSolarAeTwo__form--one"  style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Finanzas</h1>
+                                    <p>Realiza una baja inversión inicial y obtén un retorno de inversión atractivo a través de la eficiencia energética.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="carrouselSolarAeTwo__form--one"  style="background-image: url('https://solarae-mexico.com/wp-content/uploads/2023/08/shutterstock_2032604789.png');">
+                                <div></div>
+                                <div class="carrouselSolarAeTwo__form--one__information">
+                                    <h1>Instalaciones</h1>
+                                    <p>Libera cargas en tus sistemas, incrementa la vida útil de tus equipos y aprovecha al máximo tu capacidad eléctrica.</p>
+                                </div>
+                            </div>
+                        </div>
+
+					</div>
+
+				<!-- If we need pagination -->
+				<!-- <div class="swiper-pagination"></div> -->
+	
+			</div>
+
+
+			<!-- If we need navigation buttons -->
+
+            <div class="carrouselSolarAeTwo--prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+            </div>
+			
+			<div class="carrouselSolarAeTwo--next">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+			</div>
+
+		</div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper_two = new Swiper('.swiper', {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+
+            navigation: {
+            nextEl: '.carrouselSolarAeTwo--next',
+            prevEl: '.carrouselSolarAeTwo--prev',
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+
+        }) 
+    </script>
+
+
+</body>
+
+</html>
