@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<style>
+    .carrusel_imagen{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        background-image: url('./img/fondo-carrusel.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 1199px) {
+        .carrusel_imagen{
+        grid-template-columns: repeat(3, 1fr); } }
+
+    .carrusel_imagen_form{
+        width: 90%;
+        margin: auto;
+    }
+    .carrusel_imagen_form img{
+        width: 100%;
+    }
+
+    .carrouselSolarAe {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 30px 0;
+        }
+    @media (min-width: 1199px) {
+        .carrouselSolarAe {
+            margin: 0px; } }
+
+    @media (min-width: 1199px) {
+        .carrouselSolarAe {
+            grid-column: 2 / 4; } }
+
+    .carrouselSolarAe h1 {
+        font-size: 25px;
+        color:#213C77;
+        font-weight: bold;
+        font-family: Open Sans;
+        text-align: center;
+        margin: 0;
+        }
+        @media (min-width: 1199px) {
+            .carrouselSolarAe h1 {
+                font-size: 40px; } }
+
+        .carrouselSolarAe__form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; }
+
+            .carrouselSolarAe__form__start {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 10;
+            margin-bottom: 30px;}
+
+            .carrouselSolarAe__form p {
+            font-size: 24px;
+            font-family: Open Sans;
+            color: black;
+            text-align: center;
+            line-height: 34px;
+            font-weight: bold; 
+            margin: 15px 0;}
+
+            @media (min-width: 1199px) {
+                .carrouselSolarAe__form p {
+                    font-size: 24px;} }
+
+.swiper {
+  width: 90%;
+  height: auto; 
+}
+  .swiper .swiper-slide {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; }
+  .swiper .swiper-horizontal > .swiper-pagination-bullets, .swiper .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper .swiper-pagination-custom, .swiper .swiper-pagination-fraction {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 60px;
+    bottom: 20px;}
+  .swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #81BB27;
+    opacity: 1; 
+    margin: 60px 0;}
+  .swiper .swiper-pagination-bullet-active {
+    background-color: #00AFFF;
+    border: 1px solid #00AFFF; }
+</style>
+<body>
+
+    <main>
+        <div class="carrusel_imagen">
+            <div class="carrusel_imagen_form">
+                <img src="./img/mujer.png" alt="history" width="100%" height="100%"/>
+            </div>
+            <div class="carrouselSolarAe">
+                <h1>Nuestros  alumnos evalúan a sus profesores</h1>
+    
+                <!-- Slider main container -->
+                <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide carrouselSolarAe__form">
+                                <p>Regina Martinez</p>
+
+                                <div class="carrouselSolarAe__form__start">
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                </div>
+
+                                <p>"El servicio fue excelente, los profesores de KURSES ADK estuvieron siempre atentos en mis clases de matemáticas. Los recomiendo por su gran experiencia."</p>
+                            </div>
+    
+                            <div class="swiper-slide carrouselSolarAe__form">
+                                <p>Regina Martinez</p>
+
+                                <div class="carrouselSolarAe__form__start">
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                </div>
+
+                                <p>"El servicio fue excelente, los profesores de KURSES ADK estuvieron siempre atentos en mis clases de matemáticas. Los recomiendo por su gran experiencia."</p>
+                            </div>
+    
+                            <div class="swiper-slide carrouselSolarAe__form">
+                                <p>Regina Martinez</p>
+
+                                <div class="carrouselSolarAe__form__start">
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                    <img src="./img/start.png" alt="history" width="100%" height="100%"/>
+                                </div>
+
+                                <p>"El servicio fue excelente, los profesores de KURSES ADK estuvieron siempre atentos en mis clases de matemáticas. Los recomiendo por su gran experiencia."</p>
+                            </div>
+    
+                        </div>
+    
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+        
+                </div>
+    
+    
+            </div>
+           
+        </div>
+        
+        
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: "auto",
+            loop:"true",
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+
+        }) 
+    </script>
+
+
+</body>
+
+</html>
